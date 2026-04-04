@@ -1,79 +1,74 @@
 import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 
-export default function App() {
+function App() {
   const [menu, setMenu] = useState("home");
 
-  const fade = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 }
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+    <div style={{ fontFamily: "Arial", background: "#f4f6f9", minHeight: "100vh" }}>
 
-      {/* HEADER */}
-      <header className="bg-blue-600 text-white text-center p-6 shadow-lg">
-        <h1 className="text-3xl font-bold">Edelweis Hospital</h1>
-        <p className="text-sm mt-1">Pelayanan Kesehatan Modern & Profesional</p>
+      <header style={{ background: "#2563eb", color: "white", padding: "20px", textAlign: "center" }}>
+        <h1>Edelweis Hospital</h1>
+        <p>Pelayanan Kesehatan Terbaik</p>
       </header>
 
-      {/* NAVBAR */}
-      <nav className="flex justify-center gap-4 bg-white shadow-md p-3 sticky top-0 z-10">
-        <Button onClick={() => setMenu("home")} variant="outline">Home</Button>
-        <Button onClick={() => setMenu("layanan")} variant="outline">Layanan</Button>
-        <Button onClick={() => setMenu("kontak")} variant="outline">Kontak</Button>
+      <nav style={{ display: "flex", justifyContent: "center", background: "#1d4ed8" }}>
+        <button onClick={() => setMenu("home")} style={btn}>Home</button>
+        <button onClick={() => setMenu("layanan")} style={btn}>Layanan</button>
+        <button onClick={() => setMenu("kontak")} style={btn}>Kontak</button>
       </nav>
 
-      {/* CONTENT */}
-      <main className="p-6 max-w-5xl mx-auto">
+      <div style={{ padding: "30px" }}>
 
         {menu === "home" && (
-          <motion.div initial="hidden" animate="show" variants={fade}>
-            <Card className="rounded-2xl shadow-xl">
-              <CardContent className="p-6">
-                <h2 className="text-2xl font-bold mb-3">Selamat Datang</h2>
-                <p className="text-gray-600">
-                  Edelweis Hospital hadir dengan fasilitas lengkap dan tenaga medis terbaik untuk memberikan pelayanan kesehatan yang cepat, aman, dan nyaman.
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
+          <div style={card}>
+            <h2>Selamat Datang</h2>
+            <p>Edelweis Hospital adalah rumah sakit modern dengan fasilitas lengkap.</p>
+          </div>
         )}
 
         {menu === "layanan" && (
-          <motion.div initial="hidden" animate="show" variants={fade} className="grid md:grid-cols-3 gap-4">
-            {["Rawat Jalan", "Rawat Inap", "UGD 24 Jam", "Laboratorium", "Radiologi", "Apotek"].map((item, i) => (
-              <Card key={i} className="rounded-2xl shadow-lg hover:scale-105 transition">
-                <CardContent className="p-5 text-center">
-                  <h3 className="font-semibold text-lg">{item}</h3>
-                </CardContent>
-              </Card>
-            ))}
-          </motion.div>
+          <div style={card}>
+            <h2>Layanan</h2>
+            <ul>
+              <li>Rawat Jalan</li>
+              <li>Rawat Inap</li>
+              <li>UGD 24 Jam</li>
+              <li>Laboratorium</li>
+            </ul>
+          </div>
         )}
 
         {menu === "kontak" && (
-          <motion.div initial="hidden" animate="show" variants={fade}>
-            <Card className="rounded-2xl shadow-xl">
-              <CardContent className="p-6 space-y-2">
-                <h2 className="text-2xl font-bold mb-3">Kontak Kami</h2>
-                <p>📍 Jl. Soekarno-Hatta No.550, Sekejati, Kec. Buahbatu, Kota Bandung, Jawa Barat 40286</p>
-                <p>📞 088-8602-3000</p>
-                <p>✉️ info@edelweiss.id</p>
-              </CardContent>
-            </Card>
-          </motion.div>
+          <div style={card}>
+            <h2>Kontak</h2>
+            <p>Alamat: Jl. Kesehatan No.123</p>
+            <p>Telepon: 08123456789</p>
+          </div>
         )}
 
-      </main>
+      </div>
 
-      {/* FOOTER */}
-      <footer className="bg-blue-600 text-white text-center p-4 mt-10">
+      <footer style={{ background: "#2563eb", color: "white", textAlign: "center", padding: "15px" }}>
         © 2026 Edelweis Hospital
       </footer>
+
     </div>
   );
 }
+
+const btn = {
+  padding: "12px 20px",
+  border: "none",
+  background: "transparent",
+  color: "white",
+  cursor: "pointer"
+};
+
+const card = {
+  background: "white",
+  padding: "20px",
+  borderRadius: "10px",
+  boxShadow: "0 4px 10px rgba(0,0,0,0.1)"
+};
+
+export default App;
