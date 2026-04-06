@@ -42,9 +42,9 @@ function App() {
         )}
 {menu === "layanan" && (
   <div style={styles.card}>
-    <h2 style={styles.title}> Layanan Kami</h2>
+<h2 style={{ color: "#1e3a8a" }}>Layanan Kami</h2>
     <div style={styles.section}>
-      <h3> Pusat Unggulan</h3>
+<h3 style={{ color: "#1e3a8a" }}>Pusat unggulan</h3>    
       <ul style={styles.list}>
         <li><b>Brain Center & Neurosurgery</b> - CT-Scan & operasi saraf</li>
         <li><b>Mother and Children Center</b> - Anak & kandungan</li>
@@ -56,8 +56,8 @@ function App() {
     </div>
 
     <div style={styles.section}>
-      <h3> Layanan Medis Umum</h3>
-      <ul style={styles.list}>
+<h3 style={{ color: "#1e3a8a" }}>Layanan medis umum</h3>     
+ <ul style={styles.list}>
         <li> IGD 24 Jam & Poli Rawat Jalan</li>
         <li> Hemodialisis & CAPD</li>
         <li> Radiologi, Lab & Rehabilitasi</li>
@@ -65,7 +65,7 @@ function App() {
     </div>
 
     <div style={styles.section}>
-      <h3> Paket Layanan</h3>
+<h3 style={{ color: "#1e3a8a" }}>paket layanan</h3>      
       <ul style={styles.list}>
         <li> Medical Check Up (MCU)</li>
         <li> Paket Persalinan</li>
