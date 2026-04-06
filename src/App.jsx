@@ -38,6 +38,9 @@ function App() {
               Memberikan pelayanan terbaik dengan kepedulian, kenyamanan,
               dan keamanan bagi setiap pasien.
             </p>
+            <p>
+             visi misi
+            </p>
           </div>
         )}
 
