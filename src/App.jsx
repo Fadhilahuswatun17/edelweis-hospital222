@@ -5,7 +5,7 @@ function App() {
   const [menu, setMenu] = useState("home");
 
   return (
-    <div style={styles.container}>
+    <div style={styles.container}> 
       <header style={styles.header}>
         <h1 style={{ margin: 0 }}>Edelweis Hospital</h1>
         <p style={{ margin: 0, fontSize: "14px" }}>
@@ -47,7 +47,6 @@ function App() {
                 Dengan didukung oleh tenaga medis profesional, fasilitas lengkap, serta teknologi terkini, Edelweis Hospital menjadi mitra terpercaya dalam menjaga dan meningkatkan kualitas kesehatan pasien.
                 Kami mengutamakan pelayanan yang cepat, tepat, serta penuh kepedulian demi kenyamanan dan keselamatan setiap pasien.
               </p>
-              
             </div>
 
             <div style={styles.grid2}>
@@ -70,6 +69,7 @@ function App() {
             </div>
           </div>
         )}
+
         {/* LAYANAN */}
         {menu === "layanan" && (
           <div style={styles.card}>
@@ -107,19 +107,17 @@ function App() {
           </div>
         )}
 
-        {/* KONTAK FULL UPGRADE */}
+        {/* KONTAK */}
         {menu === "kontak" && (
           <div style={styles.card}>
             <h2 style={styles.title}>Kontak Kami</h2>
 
-            {/* INFO */}
             <div style={styles.section}>
               <p>📍 <b>Alamat:</b> Jl. Soekarno Hatta No. 550, Bandung</p>
               <p>📞 <b>Telepon:</b> (022) 860 23 000</p>
               <p>✉️ <b>Email:</b> info@edelweiss.id</p>
             </div>
 
-            {/* WHATSAPP */}
             <a
               href="https://wa.me/6281234567890"
               target="_blank"
@@ -129,27 +127,30 @@ function App() {
               💬 Chat WhatsApp
             </a>
 
-            {/* JAM */}
             <div style={styles.section}>
               <h3>Jam Operasional</h3>
               <p>🕐 IGD: 24 Jam</p>
               <p>🕘 Poli: 08.00 - 20.00 WIB</p>
             </div>
 
-            {/* GOOGLE MAPS */}
-            <div style={styles.section}>
-              <h3>Lokasi Kami</h3>
-              <iframe
-                title="maps-edelweis"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31683.0!2d107.6100!3d-6.9147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6a9c1a1a1a1%3A0x123456789abcdef!2sBandung!5e0!3m2!1sen!2sid!4v0000000000000"
-                width="100%"
-                height="200"
-                style={{ border: 0, borderRadius: "10px" }}
-                loading="lazy"
-              ></iframe>
-            </div>
+            {/* ✅ MAP SUDAH DIPERBAIKI */}
+            <div style={{ textAlign: "center", marginTop: "10px" }}>
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=Jl.+Soekarno-Hatta+No.550+Bandung"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      textDecoration: "none",
+      color: "red",
+      fontSize: "20px",
+      fontWeight: "bold",
+    }}
+  >
+    📍 Lihat Lokasi Edelweis Hospital
+  </a>
+</div>
 
-            {/* FORM SARAN */}
+            {/* FORM */}
             <div style={styles.section}>
               <h3>Kirim Saran</h3>
 
@@ -255,8 +256,6 @@ const styles = {
     textAlign: "left",
     marginTop: "15px",
   },
-
-  /* KONTAK STYLE */
   waBtn: {
     display: "inline-block",
     background: "#25D366",
