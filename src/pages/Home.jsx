@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div
       style={{
-        maxWidth: "900px",
+        maxWidth: "1000px",
         margin: "40px auto",
         padding: "20px",
         fontFamily: "Arial, sans-serif",
@@ -12,15 +12,14 @@ export default function Home() {
         borderRadius: "12px",
       }}
     >
-      {/* FOTO + OVERLAY */}
-      <div style={{ position: "relative" }}>
-        <img
-          src={gedung}
-          alt="Edelweis Hospital"
+      <div style={{ position: "relative", marginBottom: "20px" }}>
+        <div
           style={{
             width: "100%",
-            height: "260px",
-            objectFit: "cover",
+            height: "500px",
+            backgroundImage: `url(${gedung})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
             borderRadius: "12px",
           }}
         />
@@ -29,38 +28,32 @@ export default function Home() {
           style={{
             position: "absolute",
             top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            background: "rgba(0, 70, 140, 0.4)",
-            borderRadius: "12px",
+            right: 0,
+            height: "88%",
+            width: "45%",
+            background: "rgba(0, 70, 140, 0.6)",
+            borderTopRightRadius: "12px",
+            borderBottomRightRadius: "12px",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            fontSize: "24px",
-            fontWeight: "bold",
+            padding: "30px",
           }}
         >
-          Edelweis Hospital
+          <div style={{ color: "#fff" }}>
+            <h2 style={{ marginBottom: "10px", fontSize: "28px" }}>
+              Edelweis Hospital
+            </h2>
+
+            <p style={{ fontSize: "15px", lineHeight: "1.7" }}>
+              Edelweis Hospital hadir sebagai rumah sakit modern yang
+              berkomitmen memberikan pelayanan kesehatan terbaik kepada
+              masyarakat. Dengan didukung oleh tenaga medis profesional,
+              fasilitas lengkap, serta teknologi terkini.
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* DESKRIPSI */}
-      <p
-        style={{
-          textAlign: "center",
-          color: "#555",
-          margin: "20px 0",
-          lineHeight: "1.6",
-        }}
-      >
-        Selamat datang di Edelweis Hospital. Kami berkomitmen memberikan
-        pelayanan kesehatan terbaik kepada masyarakat dengan tenaga medis
-        profesional dan fasilitas modern.
-      </p>
-
-      {/* DIVIDER */}
       <div
         style={{
           width: "60px",
@@ -71,7 +64,6 @@ export default function Home() {
         }}
       />
 
-      {/* INFO */}
       <div
         style={{
           display: "grid",
@@ -116,7 +108,6 @@ export default function Home() {
         ))}
       </div>
 
-      {/* VISI MISI */}
       <div
         style={{
           display: "grid",
@@ -124,7 +115,6 @@ export default function Home() {
           gap: "20px",
         }}
       >
-        {/* MISI */}
         <div
           style={{
             background: "#fff",
@@ -143,18 +133,21 @@ export default function Home() {
           <h3 style={{ color: "#0077cc" }}>Misi</h3>
           <ul style={{ paddingLeft: "20px", color: "#444", lineHeight: "1.6" }}>
             <li>
-              Memberikan pengalaman terbaik dalam pelayanan dan keselamatan pasienn, dengah penuh kasih sayang serta terpercaya sesuai dengan kebutuhan setiap pasien
+              Memberikan pengalaman terbaik dalam pelayanan dan keselamatan
+              pasien, dengan penuh kasih sayang serta terpercaya sesuai dengan
+              kebutuhan setiap pasien
             </li>
             <li>
-              Mempersiapkan insan perumahsakitan yang unggul, profesional dan berorientasi pada pelayanan terbaik kepada pasien
+              Mempersiapkan insan perumahsakitan yang unggul, profesional dan
+              berorientasi pada pelayanan terbaik kepada pasien
             </li>
             <li>
-              Memberikan layanan kesehatan terbaik untuk masyarakat berbasis riset, data, dan fakta
+              Memberikan layanan kesehatan terbaik untuk masyarakat berbasis
+              riset, data, dan fakta
             </li>
           </ul>
         </div>
 
-        {/* VISI */}
         <div
           style={{
             background: "#fff",
@@ -172,23 +165,11 @@ export default function Home() {
         >
           <h3 style={{ color: "#0077cc" }}>Visi</h3>
           <p style={{ color: "#444", lineHeight: "1.6" }}>
-            Menjadi pilihan utama sebagai penyedia layanan kesehatan terintegrasi,
-            yang berfokus pada pelayanan berkualitas.
+            Menjadi pilihan utama sebagai penyedia layanan kesehatan
+            terintegrasi, yang berfokus pada pelayanan berkualitas.
           </p>
         </div>
       </div>
-
-      {/* FOOTER */}
-      <p
-        style={{
-          textAlign: "center",
-          marginTop: "30px",
-          fontSize: "14px",
-          color: "#888",
-        }}
-      >
-        Edelweis Hospital © 2026
-      </p>
     </div>
   );
 }
