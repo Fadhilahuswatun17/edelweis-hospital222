@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+console.log("update layanan");
 export default function Layanan() {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
